@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>MOT_exp</title>
+        <link rel="stylesheet" href="MOT.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="scripts/client.js"></script>
+        <script src="scripts/dataio.js"></script>
+        <script src="scripts/Task.script.js"></script>
+        <script src="scripts/config.js"></script>
+    </head>
+    <body onload="pageLoad();">
+        <div id="consent" class="screen">
+            <h1 class="mtitle">University of California, San Diego<br>
+                Consent to act as a research subject</h1>
+            <p> Edward Vul, Ph.D. is conducting a research study about multiple object tracking.
+                You have been asked to participate because you are an undergraduate here at UCSD. <br><br>
+                <b>PROCEDURES.</b> If you agree to participate in this study, the following will happen to you:<br>
+                1. You will sit at the computer and see displays of circle objects and some of them will be highlighted
+                as targets.<br>
+                2. You will try to track them for a period of time and report your tracked targets by clicking the
+                objects.<br><br>
+                <b>RISKS</b>. No potential risks or discomforts are anticipated except for the possibility that some
+                tasks
+                may be slightly boring.<br><br>
+                PAYMENT/REMUNERATION<b></b>. In consideration of your time and inconvenience, you will receive half hour
+                of
+                course credit. The procedures and length of participation will last approximately 20 minutes.<br><br>
+                <b>RIGHTS.</b> You may call the UCSD Human Research Protection Program at 858-657- 5100 to ask about
+                your
+                rights as a research subject or to report research-related problems.<br><br>
+                <b>BENEFITS</b>. There will be no direct benefit to you from these procedures. However, the investigator
+                may
+                learn more about basic questions pertaining to attention, memory, perception, cognition.<br><br>
+                <b>EXPLANATION.</b> The researcher has explained this study to you and answered your questions. If you
+                have
+                questions or research related problems, you may reach Edward Vul at 858-534- 4401.<br><br>
+                <b>VOLUNTARY NATURE OF PARTICIPATION.</b> Participation in research is entirely voluntary. You may
+                refuse to
+                participate or withdraw at any time without penalty.<br><br>
+                <b>CONFIDENTIALITY.</b> Research records will be kept confidential to the extent allowed by law. As with
+                all
+                research, there is also the possibility of loss of confidentiality. Information from participants will
+                be
+                identified by a study number. The database which relates the study number to a specific subject will be
+                maintained in the study coordinators office.<br><br>
+                <b>COPY OF CONSENT.</b> You have received a copy of this consent document to keep and a copy of the
+                Experimental Bill of Rights.
+            </p>
+
+            <button class="big-button" onclick="clickConsent();"> Click here to consent and agree to
+                participate</button>
+        </div>
+        <div id="welcome" class="screen">
+            <p class="welcome">
+                Welcome to the Object Tracking Detection study!
+                (Chrome user ONLY. You can switch browser by exiting the
+                currect website and click the link on SONA website using chrome)
+            </p>
+            <button class="big-button" onclick="clickInstructions_1();">Click here for instructions</button>
+        </div>
+
+        <div id="instructions_1" class="screen">
+            <p class="instruction">
+                Here is a display with a fixation point at the center. In each quadrant, there is one 
+                object and it is randomly spawned at one of the four positions of rectangle vertex.
+            </p>
+            <img src="img/img1.png" alt="instruction_1" class="center" style="width: 55%">
+            <button class="big-button" onclick="clickInstructions_2();">Click here for the next instruction</button>
+        </div>
+
+        <div id="instructions_2" class="screen">
+            <p class="instruction">
+                When the trial starts, four objects will start moving in parabolic paths and transition to one of the 4 locations
+                of the rectangle vertex from the spawned position.
+            </p>
+            <img src="img/img2.png" alt="instruction_2" class="center" style="width: 55%">
+            <button class="big-button" onclick="clickInstructions_3();">Click here for the next instruction</button>
+        </div>
+
+        <div id="instructions_3" class="screen">
+            <p class="instruction">
+                Throughout the movement of the objects, there will be three different scenarios where one of the random objects
+                will move in a distinctive path from the other three objects.
+                The first condition is "position condition" where the object moves to half way (the vertex of the 
+                parabolic path) and jumps to a different point to continue the second half of the parabolic path:
+                <img src="img/position.png" alt="instruction_4" class="center" style="width: 55%">
+                The second condition is "velocity condition" where the object moves to half way (the vertex of the parabolic path)
+                and moves back to the starting point following the same parabolic path.
+                <img src="img/velocity.png" alt="instruction_4" class="center" style="width: 55%">
+                The third condition is "acceleration condition" where the object moves to half way (the vertex of the parabolic path)
+                and it continues in a different parabolic path that is symmetrical about the center.
+                <img src="img/acceleration.png" alt="instruction_4" class="center" style="width: 55%">
+                Other conditions:
+                <img src="img/o1.png" alt="instruction_4" class="center" style="width: 55%">
+                <img src="img/o2.png" alt="instruction_4" class="center" style="width: 55%">
+                <img src="img/o3.png" alt="instruction_4" class="center" style="width: 55%">
+                <img src="img/o4.png" alt="instruction_4" class="center" style="width: 55%">
+                <img src="img/o5.png" alt="instruction_4" class="center" style="width: 55%">
+                <span style="color: red;">Your task is to
+                detect the object that has distinctive movement and path throughout the movement. All conditions will be randomized. 
+                Remember, you have to fixate your gaze at the fixation point</span>.
+            </p>
+            <button class="big-button" onclick="clickInstructions_4();">Click here for the next instruction</button>
+        </div>
+
+        <div id="instructions_4" class="screen">
+            <p class="instruction">
+                All objects will move in exactly one transition for one second. After the objects stop moving,
+                click the object on which you think the path change has occurred. There will be a black highlighted
+                circle around the object you clicked on. You can de-select the object by clicking the object again and choose
+                whichever at your will. The submit button is enabled when you select one object and disabled when nothing is selected. 
+            </p>
+            <img src="img/img3.png" alt="instruction_4" class="center" style="width: 55%">
+            <button class="big-button" onclick="clickInstructions_5();">Click here for the next instruction</button>
+        </div>
+
+        <div id="instructions_5" class="screen">
+            <p class="instruction">
+                At the end of each trial you will receive feedback. The green highlighted object indicates you selected the correct
+                object shown on the left picture; The red highlighted object indicates you selected the incorrect
+                object shown on the right picture. Some trials may be challenging and try your best!
+            </p>
+            <div class="imgContainer">
+                <img src="img/img4.png" alt="instruction_5" style="width: 40%">
+                <img src="img/img5.png" alt="instruction_5" style="width: 40%">
+            </div>
+            <p>
+
+            </p>
+            <button class="big-button" onclick="clickInstructions_6();">Click here to start the trials</button>
+        </div>
+
+        <div id = "ad" class = "screen">
+            <canvas id = "ad_canvas">
+            </canvas>
+            <button id = "btnStart">Start</button>
+            <script src="scripts/helper.js"></script>
+            <script src="scripts/object.js"></script>
+            <script src="scripts/Path.js"></script>
+            <script src="scripts/task.js"></script>
+        </div>
+        <div id="completed" class="screen">
+            <center>
+                <p class="mtitle"> Thank you for participating in the experiment! </p>
+            </center>
+            <button class="big-button" id="finished" onclick="experimentDone();">Click here to complete study.</button>
+        </div>
+    </body>
+</html>

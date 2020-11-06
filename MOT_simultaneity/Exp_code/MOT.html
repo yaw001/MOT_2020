@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOT_exp</title>
+    <link rel="stylesheet" href="MOT.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="dat.gui.min.js"></script> -->
+    <script src="scripts/client.js"></script>
+    <script src="scripts/dataio.js"></script>
+    <script src="scripts/script.MOT.js"></script>
+    <script src="scripts/config.js"></script>
+</head>
+
+<body onload = "pageLoad();">
+    <div id="consent" class="screen">
+        <h1 class="mtitle">University of California, San Diego<br>
+            Consent to act as a research subject</h1>
+        <p> Edward Vul, Ph.D. is conducting a research study about multiple object tracking.
+            You have been asked to participate because you are an undergraduate here at UCSD. <br><br>
+            <b>PROCEDURES.</b> If you agree to participate in this study, the following will happen to you:<br>
+            1. You will sit at the computer and see displays of circle objects and some of them will be highlighted as targets.<br>
+            2. You will try to track them for a period of time and report your tracked targets by clicking the objects.<br><br>
+            <b>RISKS</b>. No potential risks or discomforts are anticipated except for the possibility that some tasks
+            may be slightly boring.<br><br>
+            PAYMENT/REMUNERATION<b></b>. In consideration of your time and inconvenience, you will receive half hour of
+            course credit. The procedures and length of participation will last approximately 20 minutes.<br><br>
+            <b>RIGHTS.</b> You may call the UCSD Human Research Protection Program at 858-657- 5100 to ask about your
+            rights as a research subject or to report research-related problems.<br><br>
+            <b>BENEFITS</b>. There will be no direct benefit to you from these procedures. However, the investigator may
+            learn more about basic questions pertaining to attention, memory, perception, cognition.<br><br>
+            <b>EXPLANATION.</b> The researcher has explained this study to you and answered your questions. If you have
+            questions or research related problems, you may reach Edward Vul at 858-534- 4401.<br><br>
+            <b>VOLUNTARY NATURE OF PARTICIPATION.</b> Participation in research is entirely voluntary. You may refuse to
+            participate or withdraw at any time without penalty.<br><br>
+            <b>CONFIDENTIALITY.</b> Research records will be kept confidential to the extent allowed by law. As with all
+            research, there is also the possibility of loss of confidentiality. Information from participants will be
+            identified by a study number. The database which relates the study number to a specific subject will be
+            maintained in the study coordinators office.<br><br>
+            <b>COPY OF CONSENT.</b> You have received a copy of this consent document to keep and a copy of the
+            Experimental Bill of Rights.
+        </p>
+
+
+        <button class="big-button" onclick="clickConsent();"> Click here to consent and agree to participate</button>
+    </div>
+
+    <div id="welcome" class="screen">
+        <p class = "welcome">
+            Welcome to the Multiple Object Tracking study!
+            (Chrome user only, you can switch browser by exiting the
+            currect website and click the link on SONA website using chrome)
+        </p>
+        <button class="big-button" onclick="clickInstructions_1();">Click here for instructions</button>
+    </div>
+
+    <div id="instructions_1" class="screen">
+        <p class = "instruction">
+            Here is a display with a fixation point at the center. Click "Start" button to start the trial.
+        </p>
+        <img src="img/instruction_img1.png" alt = "instruction_1" class = "center" style = "width: 55%">
+        <button class="big-button" onclick="clickInstructions_2();">Click here for the next instruction</button>
+    </div>
+    
+    <div id="instructions_2" class="screen">
+        <p class = "instruction">
+            8 objects are presented as <u>4 pairs</u> located at 4 corners.
+        </p>
+        <img src="img/instruction_img2.png" alt = "instruction_2" class = "center" style = "width: 55%">
+        <button class="big-button" onclick="clickInstructions_3();">Click here for the next instruction</button>
+    </div>
+
+    <div id="instructions_3" class="screen">
+        <p class="instruction">
+            One of the objects in <u>each pair</u> is highlighted as the target with a black circle for 3 seconds.
+        </p>
+        <img src="img/instruction_img3.png" alt="instruction_3" class="center" style = "width: 55%">
+        <button class="big-button" onclick="clickInstructions_4();">Click here for the next instruction</button>
+    </div>
+
+    <div id="instructions_4" class="screen">
+        <p class="instruction">
+            The highlights disappear and 8 objects start to move around in pairs and transition across the vertice. Your
+            task is to track the targets for 8 seconds (8 transitions）while fixating at the fixation point. During the 8 seconds of tracking, the objects will move while they are well separated for most of the time.
+            There are four different types of trials illustrated below:
+            <br>
+            <br>Type one: Throughout tracking, the objects are all well separated all the time.
+            <img src="img/position_case.png" alt="instruction_4" class="center" style="width: 55%">
+
+            <br>Type two: Throughout tracking, the objects are all well separated except for four transitions where one 
+            of the random pairs of objects will intercept at the center of each quadrant will be randomly selected (each
+            pair only intercepts once). There are two types of interception shown below (opposite vs. neighboring
+            positions).<br>
+            <br>Two objects intercept starting from opposite positions.
+            <img src="img/sim_1_vel.png" alt="instruction_4" class="center" style="width: 55%">
+            <br>Two objects intercept starting from neighboring positions.
+            <img src="img/sim_1_acc.png" alt="instruction_4" class="center" style="width: 55%">
+            <br><u>Remember, there are 3 similar transitions for the other three pairs so that all the pairs undergo the interception by the end of the trial.</u>
+
+            <br>Type three: Throughout tracking, the objects are all well separated except for two transitions where two
+            of the random pairs of objects will intercept at the center of each quadrant will be randomly selected (each
+            pair only intercepts once). There are two types of interception shown below (starting from opposite vs. neighboring positions).<br>
+            <br>Two objects intercept starting from opposite positions.
+            <img src="img/sim_2_vel.png" alt="instruction_4" class="center" style="width: 55%">
+            <br>Two objects intercept starting from neighboring positions.
+            <img src="img/sim_2_acc.png" alt="instruction_4" class="center" style="width: 55%">
+            <br><u>Remember, there is another similar transition for the other two pairs so that all the pairs undergo
+                the interception by the end of the trial.</u><br>
+
+            <br>Type four: Throughout tracking, the objects are all well separated except for only transition where all
+            four pairs of objects will intercept simultaneously at the center of each quadrant.There are two types of
+            interception shown below (starting from opposite vs. neighboring positions).<br>
+            <br>Two objects intercept starting from opposite positions.
+            <img src="img/sim_4_vel.png" alt="instruction_4" class="center" style="width: 55%">
+            <br>Two objects intercept starting from neighboring positions.
+            <img src="img/sim_4_acc.png" alt="instruction_4" class="center" style="width: 55%">
+        </p>
+        <button class="big-button" onclick="clickInstructions_5();">Click here for the next instruction</button>
+    </div>
+
+    <div id="instructions_5" class="screen">
+        <p class="instruction">
+            After 8 seconds of tracking, report the targets by clicking on the objects and the selected
+            ones will be highlighted with black circles. <u>Make sure you select one from each pair (total 4 targets).</u> The click will be disabled if you
+            are trying to select both targets from the same pair. To change your decision, you have to first unclick the one you clicked from the pair and then click the other
+            one.
+            Click "Submit" button to submit the result.
+        </p>
+        <img src="img/instruction_img5.png" alt="instruction_5" class="center" style="width: 55%">
+        <button class="big-button" onclick="clickInstructions_6();">Click here for the next instruction</button>
+    </div>
+
+    <div id="instructions_6" class="screen">
+        <p class="instruction">
+            At the end of each trial, you will receive feedback. The green highlighted objects are the ones you successfully tracked
+            and the red ones are the incorrect targets you selected. 
+        </p>
+        <img src="img/instruction_img6.png" alt="instruction_6" class="center" style="width: 55%">
+        <button class="big-button" onclick="clickInstructions_7();">Click here to start the experiment</button>
+    </div>
+
+
+    <div id = "MOT">
+        <canvas id = "MOT-canvas">
+        </canvas>
+        <button id="btnStart">Start</button>
+    </div>
+    <script src="scripts/helper.js"></script>
+    <script src="scripts/object.js"></script>
+    <script src="scripts/path_spec.js"></script>
+    <script src="scripts/MOT.js"></script>
+    <div id="completed" class="screen">
+        <center>
+            <p class = "mtitle"> Thank you for participating in the experiment! </p>
+        </center>
+        <button class="big-button" id="finished" onclick="experimentDone();">Click here to complete study.</button>
+    </div>
+</body>
+</html>

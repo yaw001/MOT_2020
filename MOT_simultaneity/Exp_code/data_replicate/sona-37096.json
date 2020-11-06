@@ -1,0 +1,904 @@
+{
+    "client": {
+        "type": "sona",
+        "experiment_id": 1835,
+        "credit_token": "159be5825d604c45a44ebb0dadf4b5d0",
+        "survey_code": "37096",
+        "sid": "sona-37096",
+        "window": {
+            "width": 1440,
+            "height": 678
+        },
+        "screen": {
+            "width": 1440,
+            "height": 900
+        },
+        "userAgent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/86.0.4240.111 Safari\/537.36",
+        "score": 0,
+        "bonus": 0
+    },
+    "trials": [
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 0,
+            "trialNumber": 0,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 16518
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 1,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 18741
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 2,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 16412
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 0,
+            "trialNumber": 3,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 25591
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 4,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 15268
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 0,
+            "trialNumber": 5,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 15669
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 6,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 17148
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 7,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 16891
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 8,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 18040
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 9,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 24156
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 1,
+            "trialNumber": 10,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 15876
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 11,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 19057
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 12,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 16097
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 2,
+            "trialNumber": 13,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 15817
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 14,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 17014
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 2,
+            "trialNumber": 15,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 15345
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 0,
+            "trialNumber": 16,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 19855
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 17,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 14708
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 0,
+            "trialNumber": 18,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 16989
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 2,
+            "trialNumber": 19,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 14526
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 1,
+            "trialNumber": 20,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 15189
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 1,
+            "trialNumber": 21,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 17971
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 0,
+            "trialNumber": 22,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 15125
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 23,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 15653
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 1,
+            "trialNumber": 24,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 15868
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 25,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 14443
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 26,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 13477
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 1,
+            "trialNumber": 27,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 14559
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 0,
+            "trialNumber": 28,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 16293
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 29,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 20917
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 0,
+            "trialNumber": 30,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 14120
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 31,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 14363
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 32,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 18155
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 0,
+            "trialNumber": 33,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 14472
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 2,
+            "trialNumber": 34,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 14445
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 1,
+            "trialNumber": 35,
+            "selected_targets": [
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 14635
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 36,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 17685
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 0,
+            "trialNumber": 37,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1
+            ],
+            "trial_time": 26239
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 2,
+            "trialNumber": 38,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1
+            ],
+            "trial_time": 14984
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 1,
+            "trialNumber": 39,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 15592
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 2,
+            "trialNumber": 40,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 13585
+        },
+        {
+            "trialType": 2,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 1,
+            "trialNumber": 41,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 68430
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 2,
+            "crit_type": 1,
+            "trialNumber": 42,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 25424
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 43,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 15790
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 44,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 14021
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 2,
+            "trialNumber": 45,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "trial_time": 14484
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 2,
+            "trialNumber": 46,
+            "selected_targets": [
+                1,
+                0,
+                1,
+                0,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 12886
+        },
+        {
+            "trialType": 0,
+            "jumps": 8,
+            "sim": 4,
+            "crit_type": 1,
+            "trialNumber": 47,
+            "selected_targets": [
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 14023
+        },
+        {
+            "trialType": 1,
+            "jumps": 8,
+            "sim": 1,
+            "crit_type": 2,
+            "trialNumber": 48,
+            "selected_targets": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0
+            ],
+            "trial_time": 14236
+        }
+    ]
+}

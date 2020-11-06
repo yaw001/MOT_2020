@@ -1,0 +1,93 @@
+p {
+    font-size: 17px;
+    font-family: "Helvetica",
+        sans-serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.welcome {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+}
+
+.instruction {
+    padding: 2px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.mtitle {
+    padding: 2px;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.screen {
+    display: none;
+}
+
+.imgContainer {
+    display:flex;
+    justify-content: center;
+}
+
+canvas {
+    border: 2px solid black;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+}
+
+.big-button {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    padding: 7px 32px;
+    border: 2px solid #4CAF50;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25em;
+    font-family: "Helvetica",
+        sans-serif;
+    font-weight: bold;
+}
+
+.big-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#btnStart {
+    display: flex;
+    justify-content: center;
+    bottom: 12%;
+    left: 50%;
+    font-size: 28px;
+    font-family: "Helvetica",
+        sans-serif;
+    margin: 0px auto;
+    background-color: rgb(75, 238, 75);
+    border-radius: 8px;
+    font-weight: bold;
+}
