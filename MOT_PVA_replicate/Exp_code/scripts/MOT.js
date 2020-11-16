@@ -15,7 +15,7 @@ var highLCircle = [];
 var id;
 var trialNumber = 0;
 var trialData = [];
-var shuffled_trials = trial_shuffle([1, 1, 1, 1], expt.maxTrials/4);
+var shuffled_trials = trial_shuffle([0, 1, 2, 3], expt.maxTrials/4);
 
 //unblock trials 
 console.log(shuffled_trials)

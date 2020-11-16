@@ -15,31 +15,12 @@ var trialNumber = 0;
 var trialData = [];
 
 var shuffled_trials = trial_shuffle([0, 1, 2, 3, 4, 5, 6, 7], expt.maxTrials/8);
-// var ar_pconditions = [[0,1], [0,2], [0,3]];
+
 //horizontal and vertical identifier 
 var btn = document.getElementById("btnStart");
-// var shuffled_trials = trial_shuffle([0,1,2], expt.maxTrials/3);
-// var shuffled_trials = [0,1,2,3,4,5,6,7];
-// var crit_idx = [0, 1, 2];
+
 var crit_idx = [0, 1 ,2, 3, 4, 5, 6, 7];
-// var crit_idx = [6,6]
-// var crit_idx = [0, 1, 2, 3, 4, 5, 6, 7];
 
-
-// var ar_conditions_av = [
-//     [2, 1],
-//     [2, 1],
-//     [2, 1],
-//     [2, 1]
-// ];
-
-//TODO
-//simultaneity (allocated resource limitation) and hangover (buffering) (later)
-//Simultateity (1 pair, 2 pairs, 3 pairs, 4 pairs)
-
-//Sona Account
-//evullab
-//3509mandler
 //Parameter specifications for initializations of paths
 //rotation direction indicator
 binary = [0, 1];
@@ -56,7 +37,6 @@ fixation_plus.draw();
 function path_and_number_init(trialNumber) {
     crit_shuffled = crit_idx[shuffled_trials[trialNumber]];
     jumps = 1;
-    // jumps = 8;
     critical_time = 1;
     binary = [0, 1];
     unit_len = Math.round(canvas.height / 6);

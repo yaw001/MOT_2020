@@ -1,7 +1,7 @@
 library(rjson)
 library(tidyverse)
 
-setwd("/Users/young/Desktop/UCSD/Research/MOT_code:data/MOT_PVA_exp/Data")
+setwd("/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_PVA_exp/Data/Raw_data")
 
 #data transformation
 all.data_pva = list()
@@ -41,6 +41,8 @@ excluded_subject_pva = summary_accuracy_pva %>% filter(is.na(mean)) %>% pull(sub
 index_pva = summary_accuracy_pva$subject %in% excluded_subject_pva %>% which()
 summary_accuracy_pva=summary_accuracy_pva[-index_pva,]
 
+setwd("/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_PVA_exp/Data")
+save(dat.accuracy_pva,file="pva_accuracy.Rdata")
 #plot (scatter plot)
 #Change the trial_type to factors with labels.
 summary_accuracy_pva$trial_type<- factor(summary_accuracy_pva$trial_type,labels = c("position", "velocity", "acceleration"))

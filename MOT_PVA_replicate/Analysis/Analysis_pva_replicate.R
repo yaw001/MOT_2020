@@ -1,7 +1,7 @@
 library(rjson)
 library(tidyverse)
 
-setwd("/Users/young/Desktop/UCSD/Research/MOT_code:data/MOT_PVA_replicate/Data")
+setwd("/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_PVA_replicate/Data/Raw_data")
 
 #data transformation
 all.data_pva = list()
@@ -30,8 +30,13 @@ for(i in 1:num.subj) {
   }
 }
 
+
 #compute the accuracy rate for each trial (out of 4 pairs)
 dat.accuracy_pva = dat.accuracy_pva %>% rowwise() %>% mutate(accuracy = (target_1 + target_2 + target_3 + target_4)/4) %>% ungroup()
+
+setwd("/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_PVA_replicate/Data")
+save(dat.accuracy_pva,file="pva_data.Rdata")
+load("pva_data.Rdata")
 
 summary_accuracy_pva = dat.accuracy_pva %>% group_by(subject,trial_type) %>% 
   summarise(mean = mean(accuracy)) %>% ungroup()
@@ -54,7 +59,6 @@ summary_accuracy_pva %>% ggplot(aes(x=subject, y=mean, color = trial_type)) +
 #Overall accuracy of three types (mean and sd)
 overall_summary_accuracy_pva = summary_accuracy_pva %>% group_by(trial_type) %>% summarise(N=n(),mean_overall = mean(mean),
                                                                                    sd_overall = sd(mean))
-
 #Plot of overall accuracy
 overall_summary_accuracy_pva %>% ggplot(aes(x = trial_type, y = mean_overall, fill = trial_type, group = 1)) + geom_bar(stat = "identity")+geom_point(size = 2) +
   # labs(x="Trial types", y = "Accuracy", title = "Tracking accuracy for position, velocity and acceleration conditions") + 
@@ -86,3 +90,4 @@ accuracy_p_only %>% t.test(mu = 0.5)
 
 t.test(accuracy_p,accuracy_v, paired = T, var.equal = F)
 t.test(accuracy_p,accuracy_p_only, paired = T, var.equal = F)
+t.test(accuracy_p_only,accuracy_v, paired = T, var.equal = F)

@@ -1,5 +1,5 @@
 var trackTime = 1000;
-var interval = 20;
+var interval = 10;
 var objectBag;
 
 var canvas = document.querySelector('canvas');

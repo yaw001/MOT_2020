@@ -1,7 +1,7 @@
 library(rjson)
 library(tidyverse)
 
-setwd('/Users/young/Desktop/UCSD/Research/MOT_code:data/MOT_exp_detection/Data')
+setwd('/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_exp_detection/Data/Raw_data')
 
 all.data_d = list()
 subject = 1
@@ -27,6 +27,8 @@ for(i in 1:num.subj) {
   }
 }
 
+setwd("/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_exp_detection/Data")
+save(dat.accuracy_d, file = "detection.Rdata")
 
 #Fix the index difference
 dat.accuracy_d$target_index = dat.accuracy_d$target_index + 1

@@ -1,7 +1,7 @@
 var jumps = 8;
 var critical_time = 1;
 var trackTime = 8000;
-var interval = 20;
+var interval = 10;
 var objectBag;
 
 var btn = document.getElementById("btnStart");
@@ -14,8 +14,14 @@ var canvas = document.querySelector('canvas');
 var height = window.innerHeight - 50;
 var width = (window.innerWidth / 26)*20;
 var edge_len = Math.min(height,width);
+console.log(height)
+console.log(width)
+console.log(edge_len)
 canvas.height = edge_len;
 canvas.width = edge_len + 250;
+console.log(canvas.height)
+console.log(canvas.width)
+
 //Create a variable c (meaning 'Context')
 //.getContext('2d') we can now manipulate the 2d context ('c') of the canvas
 var c = canvas.getContext('2d');

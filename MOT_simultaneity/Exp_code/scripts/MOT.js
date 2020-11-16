@@ -15,10 +15,10 @@ var highLCircle = [];
 var id;
 var trialNumber = 0;
 var trialData = [];
-var jumps = 4;
+var jumps = 8;
 var critical_time = 1;
 var trackTime = 8000;
-var interval = 20;
+var interval = 10;
 var objectBag;
 //Simultaneity conditions: 
 //First element: kinematic condition (0=position,1=velocity,2=acceleration)
@@ -34,15 +34,6 @@ var sim_conditions = [
 ]
 // //unblocked trials
 var shuffled_trials = trial_shuffle([0, 1, 2, 3, 4, 5, 6], expt.maxTrials / 7);
-// // console.log(shuffled_trials)
-console.log(shuffled_trials)
-
-// var sim_conditions = [
-//     [2, 4],
-//     [2, 4],
-//     [2, 4],
-// ]
-// var shuffled_trials = [0,1,2]
 
 //Fixation point
 center_X = canvas.width/2;
@@ -92,6 +83,7 @@ function path_and_number_init(startPoints, trialNumber, sim_conditions) {
     // critical_idx = crit_idx_gen(sim, jumps);
     // before_critical_index = critical_idx.map(x => x - 1);
     rand_idx = rand_pair_combo();
+    console.log(rand_idx)
     path_dat = init_path(critical_index, startPoints, objectBag, profile, path_length, jumps, sim, pair_idx_c, pair_idx_c_2, rand_idx);
     console.log(path_dat)
     return init_info = {

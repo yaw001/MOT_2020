@@ -1,7 +1,7 @@
 var jumps = 8;
 var critical_time = 1;
 var trackTime = 8000;
-var interval = 20;
+var interval = 10;
 var objectBag;
 
 var btn = document.getElementById("btnStart");

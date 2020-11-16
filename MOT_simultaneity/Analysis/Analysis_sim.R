@@ -1,7 +1,7 @@
 library(rjson)
 library(tidyverse)
 
-setwd('/Users/young/Desktop/UCSD/Research/MOT_code:data/MOT_simultaneity/Exp_code/data_replicate')
+setwd('/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_simultaneity/Data_replicate/Raw_data')
 #data transformation
 all.data.sim = list()
 subject = 1
@@ -34,6 +34,11 @@ for(i in 1:num.subj) {
 #compute the accuracy rate for each trial (out of 4 pairs)
 dat.accuracy.sim = dat.accuracy.sim %>% rowwise() %>% mutate(accuracy = (target_1 + target_2 + target_3 + target_4)/4) %>% ungroup()
 
+setwd('/Users/young/Desktop/UCSD/Research/MOT_2020/MOT_simultaneity/Data_replicate')
+save(dat.accuracy.sim,file = "sim_replicate_data.Rdata")
+
+load("sim_replicate_data.Rdata")
+
 #Specify trial conditions
 dat.accuracy.sim$trial_type[dat.accuracy.sim$trial_type%in%c(0)] = 0
 dat.accuracy.sim$trial_type[dat.accuracy.sim$trial_type%in%c(1,3,5)] = 1
@@ -51,7 +56,7 @@ summary_accuracy.sim %>% ggplot(aes(x=subject, y=mean, color = as.factor(trial_t
   theme(panel.grid = element_blank())+
   labs(color = "Trial type", y = "accuracy")
 
-trial_names = c("p","v4","v2","v1","a4","a2","a1")
+trial_names = c("p","v1","v2","v4","a1","a2","a4")
 summary_accuracy.sim$trial_name = as.factor(rep(trial_names,124))
 summary_accuracy.sim$trial_type = as.factor(summary_accuracy.sim$trial_type)
 summary_accuracy.sim$trial_sim = as.factor(summary_accuracy.sim$trial_sim)
@@ -84,18 +89,6 @@ overall_summary_accuracy.sim %>% ggplot(aes(x=as.factor(trial_names), y=mean_ove
         axis.title.y = element_text(size = 16, face = "bold"))+
   geom_hline(yintercept = 0.5,color="darkblue",linetype = "dashed",size=1)
 
-# overall_summary_accuracy.sim %>% ggplot(aes(x=as.factor(trial_sim), y = mean_overall, color=as.factor(trial_type), group = as.factor(trial_type)))+
-#   geom_point(size = 1.5) +geom_line() + geom_errorbar(aes(ymin=mean_overall - sd_overall/sqrt(N),
-#                                              ymax=mean_overall + sd_overall/sqrt(N)),                
-#                                          width = 0.1)+
-#   labs(x="simultaneity", y="accuracy", color = "Trial type") + 
-#   theme_bw() +
-#   theme(panel.grid = element_blank(),
-#         axis.ticks.x = element_blank(),
-#         axis.title.x = element_blank())+
-#   geom_hline(yintercept = 0.5,color="darkblue",linetype = "dashed",size=1)
-
-
 position.sim = summary_accuracy.sim %>% filter(trial_type == 0)
 velocity.sim = summary_accuracy.sim %>% filter(trial_type == 1)
 acceleration.sim = summary_accuracy.sim %>% filter(trial_type == 2)
@@ -111,8 +104,10 @@ velocity.sim_1$mean %>% t.test(mu=0.5)
 
 v_sim_aov = aov(mean~factor(trial_sim)+Error(factor(subject)/factor(trial_sim)),data = velocity.sim)
 summary(v_sim_aov)
-pairwise.t.test(velocity.sim$mean,velocity.sim$trial_sim, p.adj = "bonf",paired = T)
-
+t.test(velocity.sim_1$mean,velocity.sim_4$mean,paired = T, var.equal = F)
+t.test(velocity.sim_2$mean, velocity.sim_4$mean, paired=T, var.equal = F)
+t.test(velocity.sim_2$mean, velocity.sim_1$mean, paired=T, var.equal = F)
+p.adjust(p = c(0.0002678,0.008522,0.1004), method = "bonferroni", n = 3)
 
 acceleration.sim_4 = acceleration.sim %>% filter(trial_sim == 4)
 acceleration.sim_4$mean %>% t.test(mu=0.5)
@@ -125,4 +120,7 @@ acceleration.sim_1$mean %>% t.test(mu=0.5)
 
 a_sim_aov = aov(mean~factor(trial_sim)+Error(factor(subject)/factor(trial_sim)),data = acceleration.sim)
 summary(a_sim_aov)
-pairwise.t.test(acceleration.sim$mean,acceleration.sim$trial_sim, p.adj = "bonf",paired = T)
+t.test(acceleration.sim_1$mean,acceleration.sim_4$mean,paired = T, var.equal = F)
+t.test(acceleration.sim_2$mean, acceleration.sim_4$mean, paired=T, var.equal = F)
+t.test(acceleration.sim_2$mean, acceleration.sim_1$mean, paired=T, var.equal = F)
+p.adjust(p = c(0.000191,0.3455,0.003536), method = "bonferroni", n = 3)
